@@ -22,10 +22,7 @@ export default function MainNavbar() {
             </Nav.Link>
             <Nav.Link as="div">
               <Link href="/skills" className="custom-link">Skills</Link>
-            </Nav.Link>
-            <Nav.Link as="div">
-              <Link href="/contact" className="custom-link">Contact</Link>
-            </Nav.Link>
+            </Nav.Link>            
           </Nav>
         </Navbar.Collapse>
       </Container>

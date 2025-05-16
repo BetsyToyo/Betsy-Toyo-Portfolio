@@ -5,18 +5,18 @@ import CustomNavbar from '../components/MainNavbar';
 const projects = [
   {
     title: "Portfolio Website",
-    description: "A personal portfolio built with React and Next.js.",
-    link: "https://yourportfolio.vercel.app"
+    description: "A personal portfolio built with Next.js., Bootstrap, and Framer Motion.",
+    link: "http://localhost:3000/"
   },
   {
-    title: "Task Manager App",
-    description: "A to-do list web app with user authentication and CRUD features.",
-    link: "#"
+    title: "Climate Solutions Page",
+    description: "Academic project built with Express.js, DaisyUI, and MongoDB.",
+    link: "http://web-322-assignment4-indol.vercel.app"
   },
   {
-    title: "Weather Dashboard",
-    description: "Displays real-time weather info using an external API.",
-    link: "#"
+    title: "Metropolitan Museum of Art Page",
+    description: "Academic project built with Next.js and Bootstrap",
+    link: "http://asigment5-web422.vercel.app"
   }
 ];
 

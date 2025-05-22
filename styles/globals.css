@@ -18,6 +18,20 @@ h1, h2, h3, h4, h5, .brand-name {
   color: var(--primary);
 }
 
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 0.5rem 0 0 0;
+  width: 60px;           
+  height: 4px;          
+  background: var(--accent);
+  border-radius: 2px;
+}
 .custom-link {
   color: var(--secondary);
   text-decoration: none;

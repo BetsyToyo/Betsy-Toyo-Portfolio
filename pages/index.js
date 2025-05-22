@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import CustomNavbar from '../components/MainNavbar';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt } from 'react-icons/fa';
 import { DiPhp, DiMysql } from 'react-icons/di';
-import { SiLaravel, SiPostgresql, SiCplusplus, SiPython, SiLivewire, SiNextdotjs, SiMongodb, SiOracle, SiVisualstudiocode, SiPostman} from 'react-icons/si';
+import { SiLaravel, SiPostgresql, SiCplusplus, SiPython, SiLivewire, SiNextdotjs, SiMongodb, SiOracle, SiPostman, SiFigma, SiDocker, SiAdobexd} from 'react-icons/si';
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 const skillGroups = [
   {
@@ -47,13 +48,16 @@ const skillGroups = [
     title: "Tools",
     skills: [
       { name: "Git", icon: <FaGitAlt size={30} color="#F1502F" /> },
-      { name: "Visual Studio Code", icon: <SiVisualstudiocode size={30} color="#007ACC" /> },
-      { name: "Postman", icon: <SiPostman size={30} color="#FF6C37" /> }
+      { name: "Docker", icon: <SiDocker size={30} color="#2496ED" /> },
+      { name: "Visual Studio Code", icon: <BiLogoVisualStudio size={30} color="#007ACC" /> },
+      { name: "Postman", icon: <SiPostman size={30} color="#FF6C37" /> },
+      { name: "Figma", icon: <SiFigma size={30} color="#A259FF" /> },
+      { name: "Adobe XD", icon: <SiAdobexd size={30} color="#FF26BE" /> }
     ]
   }
 ];
 
-const projects = [
+const projects = [  
   {
     title: "Portfolio Website",
     description: "A personal portfolio built with Next.js., Bootstrap, and Framer Motion.",
@@ -129,7 +133,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >    
-                <h2 className="mb-4">About Me</h2> 
+                <h2 className="mb-4 section-title">About Me</h2> 
                 <div className="lead">        
                   <p>
                   Hello! I’m Betsy, a <strong>Software Developer</strong> and <strong>Technical Support Specialist</strong> passionate about creating dynamic, scalable web applications and delivering outstanding IT support experiences.
@@ -167,7 +171,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Skills</h2>
+            <h2 className="mb-4 section-title">Skills</h2>
             {skillGroups.map((group, idx) => (
               <div key={idx} className="mb-4">
                 <h5 className="mb-3 text-center">{group.title}</h5>
@@ -197,7 +201,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4">Projects</h2>
+            <h2 className="mb-4 section-title">Projects</h2>
             <Row>
               {projects.map((project, index) => (
                 <Col md={4} key={index} className="mb-4">

@@ -9,21 +9,22 @@ export default function MainNavbar() {
     <Navbar bg="light" expand="lg" className="shadow-sm mb-4">
       <Container>
         <Link href="/" className="custom-link">
-          <Navbar.Brand >My Portfolio</Navbar.Brand>
+          <Navbar.Brand className="brand-name" >Betsy Toyo</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as="div">
-              <Link href="/" className="custom-link">About me</Link>
+              <Link href="#about" className="custom-link">About me</Link>
             </Nav.Link>
             <Nav.Link as="div">
-              <Link href="/projects" className="custom-link">Projects</Link>
+              <Link href="#skills" className="custom-link">Skills</Link>
             </Nav.Link>
             <Nav.Link as="div">
-              <Link href="/skills" className="custom-link">Skills</Link>
+              <Link href="#projects" className="custom-link">Projects</Link>
             </Nav.Link>            
           </Nav>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

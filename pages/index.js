@@ -102,9 +102,9 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1>Hello! I'm Betsy 👋</h1>
+                <h1>Hello! I’m Betsy 👋</h1>
                 <p className="lead">
-                  I'm a full-stack developer passionate about building clean and scalable applications with modern web technologies.
+                  I’m a full-stack developer passionate about building clean and scalable applications with modern web technologies.
                 </p>
               </motion.div>
             </Col>
@@ -117,7 +117,7 @@ export default function Home() {
                 <img
                   src="/images/avatar.png"
                   alt="Profile"
-                  className="img-fluid rounded-circle shadow-sm"
+                  className="ms-3 img-fluid rounded-circle shadow-sm"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </motion.div>
@@ -147,7 +147,7 @@ export default function Home() {
                 </div> 
               </motion.div>
             </Col>
-            <Col md={4}>
+            <Col md={4} className="d-flex justify-content-center">
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ export default function Home() {
                 <img
                   src="/images/profile.jpg"
                   alt="Profile"
-                  className="img-fluid rounded-circle shadow-sm"
+                  className="ms-3 img-fluid rounded-circle shadow-sm"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </motion.div>

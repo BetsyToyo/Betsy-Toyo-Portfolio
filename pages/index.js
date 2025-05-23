@@ -61,7 +61,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio built with Next.js., Bootstrap, and Framer Motion.",
-    link: "http://localhost:3000/",
+    link: "https://betsy-toyo-portfolio.vercel.app/",
     image: "/images/portfolio.gif",
     technologies: ["Next.js", "Bootstrap", "Framer Motion"]
   },   

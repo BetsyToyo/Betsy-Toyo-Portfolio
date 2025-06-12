@@ -1,7 +1,8 @@
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import CustomNavbar from '../components/MainNavbar';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt } from 'react-icons/fa';
+import CustomFooter from '../components/CustomFooter';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter  } from 'react-icons/fa';
 import { DiPhp, DiMysql } from 'react-icons/di';
 import { SiLaravel, SiPostgresql, SiCplusplus, SiPython, SiLivewire, SiNextdotjs, SiMongodb, SiOracle, SiPostman, SiFigma, SiDocker, SiAdobexd} from 'react-icons/si';
 import { BiLogoVisualStudio } from "react-icons/bi";
@@ -51,20 +52,12 @@ const skillGroups = [
       { name: "Docker", icon: <SiDocker size={30} color="#2496ED" /> },
       { name: "Visual Studio Code", icon: <BiLogoVisualStudio size={30} color="#007ACC" /> },
       { name: "Postman", icon: <SiPostman size={30} color="#FF6C37" /> },
-      { name: "Figma", icon: <SiFigma size={30} color="#A259FF" /> },
-      { name: "Adobe XD", icon: <SiAdobexd size={30} color="#FF26BE" /> }
+      { name: "Figma", icon: <SiFigma size={30} color="#A259FF" /> }
     ]
   }
 ];
 
-const projects = [  
-  {
-    title: "Portfolio Website",
-    description: "A personal portfolio built with Next.js., Bootstrap, and Framer Motion.",
-    link: "https://betsy-toyo-portfolio.vercel.app/",
-    image: "/images/portfolio.gif",
-    technologies: ["Next.js", "Bootstrap", "Framer Motion"]
-  },   
+const projects = [     
   {
     title: "Climate Solutions Page",
     description: "Academic project built with Express.js, DaisyUI, Embedded Javascript (EJS) and MongoDB.",
@@ -85,6 +78,12 @@ const projects = [
     link: "http://asigment5-web422.vercel.app",
     image: "/images/museum.gif",
     technologies: ["Next.js", "Bootstrap"]
+  },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio built with Next.js., Bootstrap, and Framer Motion.",  
+    image: "/images/portfolio.gif",
+    technologies: ["Next.js", "Bootstrap", "Framer Motion"]
   }
 ];
 
@@ -142,7 +141,7 @@ export default function Home() {
                   With professional experience in full-stack development and database management, I’ve built and maintained applications using <strong>PHP (7.0–8.0)</strong>, <strong>JavaScript</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>Laravel</strong>, <strong>React</strong>, <strong>Next.js</strong>, and <strong>MySQL/PostgreSQL</strong>. I thrive on writing clean, efficient code and ensuring seamless deployments using SSH, SFTP, and Git/GitHub/GitLab workflows.
                   </p>                                        
                   <p>
-                  Let’s connect! If you’re looking for a detail-oriented, results-driven developer who is passionate about building better digital experiences, feel free to reach out via LinkedIn.
+                  Let’s connect! If you’re looking for a detail-oriented, results-driven developer who is passionate about building better digital experiences.
                   </p>
                 </div> 
               </motion.div>
@@ -225,9 +224,11 @@ export default function Home() {
                             <Badge bg="info" key={idx} className="me-1">{tech}</Badge>
                           ))}
                         </div>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                          View Project
-                        </a>
+                        {project.link && (
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                            View Project
+                          </a>
+                        )}
                       </Card.Body>
                     </Card>
                   </motion.div>
@@ -236,7 +237,79 @@ export default function Home() {
             </Row>
           </motion.div>
         </section>
+         {/* Contact Me Section */}
+        <section id="contact" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="mb-4 section-title">Contact Me</h2>
+            <Row className="justify-content-center">
+              {/* Contact Information Column */}
+              <Col md={5} className="mb-4 mb-md-0">
+                <Card className="p-4 shadow-sm border-0 h-100">
+                  <h5 className="mb-4">Contact Information</h5>
+                  <div className="mb-3 d-flex align-items-center">
+                    <span className="me-3 d-flex align-items-center justify-content-center rounded" style={{ width: 44, height: 44, background: "var(--background)" }}>
+                      <FaEnvelope size={22} color="var(--primary)" />
+                    </span>
+                    <div>
+                      <div style={{ fontSize: "0.9rem", color: "#888" }}>Email</div>
+                      <div>betsytoyo23@gmail.com</div>
+                    </div>
+                  </div>                  
+                  <div className="mb-4 d-flex align-items-center">
+                    <span className="me-3 d-flex align-items-center justify-content-center rounded" style={{ width: 44, height: 44, background: "var(--background)" }}>
+                      <FaMapMarkerAlt size={22} color="var(--primary)" />
+                    </span>
+                    <div>
+                      <div style={{ fontSize: "0.9rem", color: "#888" }}>Location</div>
+                      <div>Toronto, Canada</div>
+                    </div>
+                  </div>
+                  <h5 className="mb-3">Follow Me</h5>
+                  <div className="d-flex gap-3">
+                    <a href="https://github.com/BetsyToyo" target="_blank" rel="noopener noreferrer"
+                      className="d-flex align-items-center justify-content-center rounded"
+                      style={{ width: 44, height: 44, background: "var(--background)" }}>
+                      <FaGithub size={22} color="var(--primary)" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/betsy-toyo-avila/" target="_blank" rel="noopener noreferrer"
+                      className="d-flex align-items-center justify-content-center rounded"
+                      style={{ width: 44, height: 44, background: "var(--background)" }}>
+                      <FaLinkedin size={22} color="var(--primary)" />
+                    </a>                    
+                  </div>
+                </Card>
+              </Col>
+              {/* Form Column */}
+              <Col md={7}>
+                <Card className="p-4 shadow-sm border-0 h-100">
+                  <form action="https://api.web3forms.com/submit" method="POST">
+                  <input type="hidden" name="access_key" value="7127b19c-366e-44a2-94aa-4390e95b2342"></input>
+                    <div className="mb-3">
+                      <label htmlFor="name" className="form-label">Name</label>
+                      <input type="text" className="form-control" id="name" name="name" placeholder="Your Name" />
+                    </div>
+                    <div className="mb-3">
+                      <label htmlFor="email" className="form-label">Email</label>
+                      <input type="email" className="form-control" id="email" name="email" placeholder="you@example.com" />
+                    </div>
+                    <div className="mb-3">
+                      <label htmlFor="message" className="form-label">Message</label>
+                      <textarea className="form-control" id="message" rows={4} name="message" placeholder="Your message"></textarea>
+                    </div>
+                     <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+                    <button type="submit" className="btn btn-primary">Send</button>
+                  </form>
+                </Card>
+              </Col>
+            </Row>
+          </motion.div>
+        </section>
       </Container>
+      <CustomFooter />
     </>
   );
 }

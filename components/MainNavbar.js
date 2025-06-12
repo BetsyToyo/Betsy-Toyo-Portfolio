@@ -22,6 +22,9 @@ export default function MainNavbar() {
             </Nav.Link>
             <Nav.Link as="div">
               <Link href="#projects" className="custom-link">Projects</Link>
+            </Nav.Link> 
+            <Nav.Link as="div">
+              <Link href="#contact" className="custom-link">Contact me</Link>
             </Nav.Link>            
           </Nav>
           
